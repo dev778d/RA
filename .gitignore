@@ -1,0 +1,6 @@
+nul
+.claude/
+.playwright-mcp/
+node_modules/
+dist/
+.env
