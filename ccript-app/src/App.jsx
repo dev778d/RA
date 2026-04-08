@@ -162,6 +162,50 @@ function App() {
         </div>
       </section>
 
+      {/* Portfolio Section */}
+      <section id="portfolio" className="section portfolio">
+        <div className="container">
+          <div className="section-header">
+            <h2>Production Work</h2>
+            <p>A look at our highest impact AI and digital transformations. Driving millions in value.</p>
+          </div>
+          
+          <div className="portfolio-grid" onMouseMove={handleMouseMove}>
+            {/* Portfolio Item 1 */}
+            <div className="portfolio-card service-card">
+              <div className="portfolio-image-placeholder">
+                <span className="portfolio-metric">100% Ticket Resolution</span>
+              </div>
+              <div className="portfolio-content">
+                <div className="portfolio-tags">
+                  <span className="p-tag">SaaS</span>
+                  <span className="p-tag">Automation</span>
+                </div>
+                <h3>Streamlined Operations With Salesforce & Azure</h3>
+                <p>Complete integration driving significant team productivity increases for enterprise operations.</p>
+                <a href="#" className="service-link">View Project <ArrowRight size={16} style={{ marginLeft: 6 }}/></a>
+              </div>
+            </div>
+
+            {/* Portfolio Item 2 */}
+            <div className="portfolio-card service-card">
+              <div className="portfolio-image-placeholder">
+                <span className="portfolio-metric">Smarter Gameplay</span>
+              </div>
+              <div className="portfolio-content">
+                <div className="portfolio-tags">
+                  <span className="p-tag">AI/LLM</span>
+                  <span className="p-tag">AR/VR</span>
+                </div>
+                <h3>AI in AR/VR Game Development Services</h3>
+                <p>Scaling intelligent, responsive behaviors into massive virtual reality environments.</p>
+                <a href="#" className="service-link">View Project <ArrowRight size={16} style={{ marginLeft: 6 }}/></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Process/How we work */}
       <section className="section">
         <div className="container">

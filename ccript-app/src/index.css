@@ -368,8 +368,12 @@ ul {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
+}
+
+.services-grid .service-card:nth-child(1) {
+  grid-column: span 2;
 }
 
 .service-card {
@@ -441,6 +445,78 @@ ul {
 
 .service-card:hover .service-link {
   color: var(--primary-red);
+}
+
+/* Portfolio Section */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.portfolio-card {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-image-placeholder {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: radial-gradient(circle at 50% 50%, rgba(217, 4, 41, 0.1) 0%, transparent 70%), #000000;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  display: flex;
+  align-items: flex-end;
+  padding: 30px;
+}
+
+.portfolio-metric {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  padding: 8px 16px;
+  border-radius: 999px;
+  color: white;
+  font-weight: 600;
+  font-family: 'Outfit', sans-serif;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.portfolio-content {
+  padding: 40px 30px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-tags {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.p-tag {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(217, 4, 41, 0.4);
+  color: var(--primary-red);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.portfolio-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.portfolio-content p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  flex-grow: 1;
 }
 
 /* Call to Action */
@@ -569,6 +645,15 @@ ul {
   .stats-grid {
     grid-template-columns: 1fr;
     gap: 20px;
+  }
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .services-grid .service-card:nth-child(1) {
+    grid-column: span 1;
+  }
+  .portfolio-grid {
+    grid-template-columns: 1fr;
   }
 }
 
